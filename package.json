@@ -1,12 +1,12 @@
 {
-  "name": "promise-sync",
+  "name": "synchronize-promise",
   "version": "0.0.1",
   "author": {
     "name": "余阿伟"
   },
-  "main": "promise-sync.js",
+  "main": "synchronize-promise.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aweiu/promise-sync.git"
+    "url": "https://github.com/aweiu/synchronize-promise.git"
   }
 }

@@ -1,16 +1,16 @@
-# promise-sync
+# synchronize-promise
 用于同步执行promise方法
 
 ## 安装
 ```
-npm install promise-sync
+npm install synchronize-promise
 ```
 ## 使用示例
 ```
-import PromiseSync from 'promise-sync'
-var nPromiseSync = new PromiseSync()
+import SyncPromise from 'synchronize-promise'
+var nSyncPromise = new SyncPromise()
 function test(){
-    return nPromiseSync.do(() => {
+    return nSyncPromise.do(() => {
         return new Promise(resolve => {
             setTimeout(resolve => {
                 resolve('test')
