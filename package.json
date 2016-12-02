@@ -1,6 +1,15 @@
 {
   "name": "synchronize-promise",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "description": "用于同步执行promise方法",
+  "keywords": [
+    "synchronize",
+    "promise",
+    "promise－synchronize",
+    "sync",
+    "sync-promise",
+    "promise-sync"
+  ],
   "author": {
     "name": "余阿伟"
   },
@@ -8,5 +17,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/aweiu/synchronize-promise.git"
-  }
+  },
+  "license": "ISC"
 }

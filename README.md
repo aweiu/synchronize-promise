@@ -18,7 +18,7 @@ function test(){
         })
     })
 }
-// 可以看到每次test都会3s后返回结果 一共6s。它们之间时串行的，独立的
+// 可以看到每次test都会3s后返回结果 一共6s。它们之间是串行的，独立的
 test().then(rs => console.log(rs))
 test().then(rs => console.log(rs))
 ```
