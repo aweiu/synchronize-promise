@@ -3,14 +3,9 @@
 /**
  * Created by awei on 2016/9/3.
  */
-module.exports = function () {
-  var lastPromise;
-  this.do = function (promise) {
-    lastPromise = lastPromise ? lastPromise.then(() => {
-      return promise();
-    }).catch(() => {
-      return promise();
-    }) : promise();
-    return lastPromise;
-  };
+function SyncPromise() {}
+SyncPromise.prototype.do = function (promiseFun) {
+  this._lastPromise = this._lastPromise ? this._lastPromise.then(() => promiseFun()).catch(() => promiseFun()) : promiseFun();
+  return this._lastPromise;
 };
+module.exports = SyncPromise;

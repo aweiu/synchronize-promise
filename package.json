@@ -1,6 +1,6 @@
 {
   "name": "synchronize-promise",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "用于同步执行promise方法",
   "keywords": [
     "synchronize",
