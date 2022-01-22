@@ -1,20 +1,32 @@
-# synchronize-promise
-用于同步执行promise方法
+## synchronizePromise
 
-## 安装
+A ts-type friendly promise Library —— Synchronize your promise!
+
+### Install
+
 ```
 npm install synchronize-promise
 ```
-## 使用示例
-```
-import SyncPromise from 'synchronize-promise'
-const nSyncPromise = new SyncPromise()
-function test () {
-  return nSyncPromise.do(() => {
-    return new Promise(resolve => setTimeout(() => resolve('test'), 3000))
-  })
+
+### Demo
+
+```javascript
+import synchronizePromise from "synchronize-promise";
+
+function test() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("ConcurrentPromise"), 3000)
+  );
 }
-// 可以看到每次test都会3s后返回结果 一共6s。它们之间是串行的，独立的
-test().then(rs => console.log(rs))
-test().then(rs => console.log(rs))
+
+const sTest = synchronizePromise(test);
+
+// you will see the 「ConcurrentPromise」 every three seconds
+sTest().then((ret) => console.log(ret));
+sTest().then((ret) => console.log(ret));
+sTest().then((ret) => console.log(ret));
 ```
+
+### Related
+
+[A ts-type friendly promise Library —— Concurrent your promise!](https://github.com/aweiu/concurrent-promise)

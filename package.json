@@ -1,7 +1,7 @@
 {
   "name": "synchronize-promise",
-  "version": "0.0.5",
-  "description": "用于同步执行promise方法",
+  "version": "1.0.0",
+  "description": "A ts-type friendly promise Library —— Synchronize your promise!",
   "keywords": [
     "synchronize",
     "promise",
@@ -10,13 +10,22 @@
     "sync-promise",
     "promise-sync"
   ],
-  "author": {
-    "name": "余阿伟"
-  },
-  "main": "synchronize-promise.js",
+  "author": "aweiu",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/aweiu/synchronize-promise.git"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "build": "father-build --esm --cjs --target node --nodeVersion 8"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "father-build": "^1.20.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
 }
